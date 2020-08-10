@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">POCLille</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="home">Accueil</string>
+    <string name="vlille">V\'lille</string>
+    <string name="list">Liste</string>
+    <string name="map">A proximité</string>
+    <string name="random">Au hasard</string>
+    <string name="main_menu">Menu Principal</string>
+    <string name="vlille_list">Liste des stations V\'lille</string>
+    <string name="vlille_map">Carte des stations V\'lille</string>
+    <string name="roubaix_list">Liste des fresques urbaines à Roubaix</string>
+    <string name="roubaix_random">Fresques urbaines à Roubaix - Au Hasard</string>
+    <string name="share_localisation">Pratager localisation</string>
+    <string name="select_functionnality">Bienvenue.\nQue voulez vous faire ?</string>
+    <string name="discover_roubaix">Découvrir le Street Art à Roubaix</string>
+    <string name="find_vlille">Trouver un V\'Lille</string>
+    <string name="bikes_available">Vélos : %d</string>
+    <string name="spots_available">Places : %d</string>
+    <string name="vlille_nearby">Stations VLille à moins de %dm.</string>
+</resources>

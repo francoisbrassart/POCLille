@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">POCLille</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="home">Home</string>
+    <string name="vlille">V\'lille</string>
+    <string name="list">List</string>
+    <string name="map">Map</string>
+    <string name="random">Random</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="vlille_list">V\'lille Stations List</string>
+    <string name="vlille_map">V\'lille Stations Map</string>
+    <string name="roubaix_list">Urban Frescoes List</string>
+    <string name="roubaix_random">Urban Frescoes Random</string>
+    <string name="share_localisation">Share localisation</string>
+    <string name="select_functionnality">Welcome.\nWhat do you want to do ?</string>
+    <string name="discover_roubaix">Discover Roubaix\' Frescoes</string>
+    <string name="find_vlille">Find a V\'Lille</string>
+    <string name="bikes_available">Bikes : %d</string>
+    <string name="spots_available">Spots : %d</string>
+    <string name="vlille_nearby">Vlille Station at less than %dm.</string>
+</resources>

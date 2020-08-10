@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+
+        <item android:title="@string/vlille">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/activity_main_drawer_vlille_list"
+                        android:title="@string/list"
+                        android:checkable="true"/>
+                    <item
+                        android:id="@+id/activity_main_drawer_vlille_map"
+                        android:title="@string/map"
+                        android:checkable="true"/>
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Fresques urbaines à Roubaix">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/activity_main_drawer_roubaix_list"
+                        android:title="@string/list"
+                        android:checkable="true"/>
+                    <item
+                        android:id="@+id/activity_main_drawer_roubaix_random"
+                        android:title="@string/random"
+                        android:checkable="true"
+                        />
+                </group>
+            </menu>
+        </item>
+</menu>
