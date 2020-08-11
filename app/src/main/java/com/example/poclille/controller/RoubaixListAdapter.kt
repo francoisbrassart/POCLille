@@ -3,33 +3,30 @@ package com.example.poclille.controller
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.poclille.R
 import com.example.poclille.controller.fragments.RoubaixDetailFragment
 import com.example.poclille.model.Fresco
+import kotlinx.android.synthetic.main.list_freco.view.*
 import java.util.*
 
 class RoubaixListAdapter(private val dataSet: ArrayList<Fresco>) : RecyclerView.Adapter<RoubaixListAdapter.RoubaixViewHolder>() {
 
     inner class RoubaixViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val mNameTextView: TextView = itemView.findViewById<View>(R.id.list_fresco_name) as TextView
-        private val mStreetAddressTextView: TextView = itemView.findViewById<View>(R.id.list_fresco_street_address) as TextView
-        private val mDescriptionTextView: TextView = itemView.findViewById<View>(R.id.list_fresco_description) as TextView
         private lateinit var mFresco:Fresco
 
         fun display(fresco:Fresco){
             mFresco=fresco
-            mNameTextView.text=fresco.name
-            mStreetAddressTextView.text=fresco.streetAdress
-            mDescriptionTextView.text=fresco.description
+            itemView.listFrescoName.text=fresco.name
+            itemView.listFrescoStreetAddress.text=fresco.streetAdress
+            itemView.listFrescoDescription.text=fresco.description
         }
         init {
             //on click -> go to roubaix detail fragment
             itemView.setOnClickListener {
                 val context=itemView.context as FragmentActivity
-                context.supportFragmentManager.beginTransaction().replace(R.id.activity_main_frame_layout,RoubaixDetailFragment(mFresco)).addToBackStack(null).commit()
+                context.supportFragmentManager.beginTransaction().replace(R.id.ActivityMainFrameLayout,RoubaixDetailFragment(mFresco)).addToBackStack(null).commit()
             }
         }
     }

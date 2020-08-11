@@ -4,7 +4,7 @@
     android:layout_height="match_parent" >
 
     <ProgressBar
-        android:id="@+id/fragment_vlille_list_progress_bar"
+        android:id="@+id/FragmentVlilleListProgressBar"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -15,7 +15,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/fragment_vlille_list_recycler_view"
+        android:id="@+id/FragmentVlilleListRecyclerView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 

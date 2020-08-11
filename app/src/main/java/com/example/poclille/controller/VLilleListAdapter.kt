@@ -5,29 +5,25 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.poclille.R
 import com.example.poclille.model.VLille
+import kotlinx.android.synthetic.main.list_vlille.view.*
 import java.util.*
 
 class VLilleListAdapter(private val dataSet: ArrayList<VLille>): RecyclerView.Adapter<VLilleListAdapter.VLilleViewHolder>() {
 
     inner class VLilleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val mNameTextView: TextView = itemView.findViewById<View>(R.id.list_vlille_name) as TextView
-        private val mAddressTextView: TextView = itemView.findViewById<View>(R.id.list_vlille_address) as TextView
-        private val mVeloTextView: TextView = itemView.findViewById<View>(R.id.list_vlille_velos_dispo) as TextView
-        private val mPlacesTextView: TextView = itemView.findViewById<View>(R.id.list_vlille_places_dispo) as TextView
         private lateinit var mVLille:VLille
 
         fun display(vlille: VLille){
             mVLille=vlille
             val context=itemView.context as FragmentActivity
-            mNameTextView.text=vlille.name
-            mAddressTextView.text=vlille.address
-            mVeloTextView.text=context.getString(R.string.bikes_available,vlille.velosDispo)
-            mPlacesTextView.text=context.getString(R.string.spots_available,vlille.placesDispo)
+            itemView.listVlilleName.text=vlille.name
+            itemView.listVlilleAddress.text=vlille.address
+            itemView.listVlilleVelosDispo.text=context.getString(R.string.bikes_available,vlille.velosDispo)
+            itemView.listVlillePlacesDispo.text=context.getString(R.string.spots_available,vlille.placesDispo)
         }
         init {
             itemView.setOnClickListener {

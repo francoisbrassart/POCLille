@@ -12,12 +12,12 @@
         android:text="Select a distance"
         android:textSize="24sp" />
     <NumberPicker
-        android:id="@+id/numberPicker1"
+        android:id="@+id/numberPicker"
         android:layout_width="122dp"
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/dialog_choose_distance_confirm_btn"
+        android:id="@+id/dialogChooseDistanceButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Set" />

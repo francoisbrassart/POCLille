@@ -8,7 +8,7 @@
     >
 
     <TextView
-        android:id="@+id/list_vlille_name"
+        android:id="@+id/listVlilleName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -17,7 +17,7 @@
         tools:text="City" />
 
     <TextView
-        android:id="@+id/list_vlille_address"
+        android:id="@+id/listVlilleAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -31,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/list_vlille_velos_dispo"
+            android:id="@+id/listVlilleVelosDispo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -40,7 +40,7 @@
             tools:text="velos:4" />
 
         <TextView
-            android:id="@+id/list_vlille_places_dispo"
+            android:id="@+id/listVlillePlacesDispo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
