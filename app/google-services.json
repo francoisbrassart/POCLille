@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "525151755099",
+    "project_id": "poc-lille",
+    "storage_bucket": "poc-lille.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525151755099:android:906be41a17f9889e7fd87e",
+        "android_client_info": {
+          "package_name": "com.fanfan.poclille"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525151755099-ej03h5a7cim16dmuatbvpi9sjf436o4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClkNKoNxN8hkFAe0qlErqtf3rA36C_Lwc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525151755099-ej03h5a7cim16dmuatbvpi9sjf436o4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
