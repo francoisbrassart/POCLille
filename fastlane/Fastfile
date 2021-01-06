@@ -1,0 +1,60 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "Runs all the tests"
+  lane :test do
+    gradle(task: "test")
+  end
+
+  desc "Submit a new Beta Build to Crashlytics Beta"
+  lane :beta do
+    gradle(task: "clean assembleRelease")
+    crashlytics
+  
+    # sh "your_script.sh"
+    # You can also use other beta testing services here
+  end 
+
+  desc 'Install firebase CLI'
+  lane :install_firebase do 
+    sh('curl -sL firebase.tools | bash')
+  end
+
+  desc "Deploy to Firebase APP Distribution"
+  lane :deploy_firebase do |options|
+    release_notes = options[:release_notes]
+    release_notes = prompt(text: 'Release Notes : ') if release_notes.nil?
+    firebase_app_distribution(app: "1:525151755099:android:906be41a17f9889e7fd87e", firebase_cli_token: "1//03OQCBh4Hd9E6CgYIARAAGAMSNwF-L9IrvgKxBiK0ZCfhsRSrRU7fftk1C8YckxalmXKgmlCvLXwWpxP5jCQCkmzW0LNsiZi0Jow", apk_path: "/Users/admin/Documents/perso/POCLille/app/build/outputs/apk/debug/app-debug.apk", testers: "francoisb542@gmail.com",release_notes: release_notes)
+  end
+
+  desc "Build APK"
+  lane :build do
+    android_set_version_code
+    current_version =   android_get_version_name
+    change_version = prompt(text: 'Do you want to change the version name ? (y for yes)?')
+    current_version = prompt(text: 'new version name : ') if change_version=='y'
+    android_set_version_name(version_name: current_version) if change_version=='y'
+    gradle(task: "assemble")
+  end
+
+  desc "Deploy a new version to the Google Play"
+  lane :deploy do
+    gradle(task: "clean assembleRelease")
+    upload_to_play_store
+  end
+end
